@@ -31,7 +31,7 @@
 This is the manual for AD Studio version
 @value{VERSION}.@*
 The latest edition of the manual is available at:@*
-@uref{http://admb-project.org/tools/adstudio}
+@uref{https://github.com/admb-project/adstudio}
 @sp
 Copyright @copyright{} @value{YEARS} Arni Magnusson
 @sp
