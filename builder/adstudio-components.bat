@@ -7,8 +7,6 @@ REM Script:   adstudio-components                                              #
 REM                                                                            #
 REM Purpose:  Download AD Studio components                                    #
 REM                                                                            #
-REM Requires: robocopy, wget                                                   #
-REM                                                                            #
 REM Returns:  Creates a directory called 'components'                          #
 REM                                                                            #
 REM ############################################################################
@@ -29,48 +27,54 @@ set MANUAL=https://github.com/admb-project/adstudio/releases/download/manual
 echo on
 @echo.
 
-@echo *** Copying components ...
-set CP=robocopy
-%CP% ..\icons . /e > NUL
-%CP% ..\dot . .emacs > NUL
-%CP% .. . NEWS > NUL
-
-@echo *** Downloading components ...
 @rd /q /s components 2>NUL
 @md components
 @pushd components
-set WGET=wget -q --no-check-certificate
+
+@echo *** Copying components ...
+@set CP=robocopy
+%CP% ..\..\icons icons /e > NUL
+%CP% ..\..\dot . .emacs > NUL
+%CP% ..\.. . NEWS > NUL
+
+@echo *** Downloading components ...
+@powershell Invoke-WebRequest -OutFile wget.exe %CON%/wget.exe
+@set WGET=wget -q --no-check-certificate
 %WGET% -P admb %GITHUB%/admb-project/admb/master/contrib/emacs/admb.el
 %WGET% -P admb %GITHUB%/admb-project/admb/master/contrib/emacs/LICENSE
 %WGET% -P admb %GITHUB%/admb-project/admb/master/contrib/emacs/NEWS
 %WGET% -P tmb %GITHUB%/kaskr/adcomp/master/emacs/tmb.el
 %WGET% -P tmb %GITHUB%/kaskr/adcomp/master/emacs/LICENSE
 %WGET% -P tmb %GITHUB%/kaskr/adcomp/master/emacs/NEWS
-%WGET% %CON%/%ADMB%
 %WGET% %DOCS%/admb-%VERSION%.pdf
+%WGET% %CON%/%ADMB%
 %WGET% %DOCS%/admbre-%VERSION%.pdf
 %WGET% %MANUAL%/adstudio.pdf
-%WGET% %DOCS%/autodif-%VERSION%.pdf
 %WGET% %CON%/%AUCTEX%
+%WGET% %DOCS%/autodif-%VERSION%.pdf
 %WGET% http://ftp.gnu.org/gnu/emacs/windows/%EMACS%
 %WGET% http://ess.r-project.org/downloads/ess/%ESS%
 %WGET% http://constexpr.org/innoextract/files/%INNO%
 %WGET% https://jblevins.org/projects/markdown-mode/markdown-mode.el
 %WGET% https://cran.r-project.org/bin/windows/Rtools/%RTOOLS%
+@del wget.exe
 @echo.
 
 @echo *** Unpacking components ...
+@powershell Invoke-WebRequest -OutFile unzip.exe %CON%/unzip.exe
 unzip -q -d %ADMB:.zip=% %ADMB%
 unzip -q -d auctex %AUCTEX%
 unzip -q -d emacs %EMACS%
 unzip -q %ESS%
 @rename %ESS:.zip=% ess
-unzip -q -d innoextract %INNOEXTRACT%
-@move innoextract\innoextract.exe . >NUL
-@rd /q /s innoextract
+unzip -q -d inno %INNO%
+@move inno\innoextract.exe . >NUL
+@rd /q /s inno
 innoextract -s -d temp %RTOOLS%
 @move temp\app Rtools >NUL
 @rd /q /s temp
+@del innoextract.exe
+@del unzip.exe
 @echo.
 
 @echo *** Renaming manuals ...

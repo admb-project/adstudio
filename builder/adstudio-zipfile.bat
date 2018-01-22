@@ -7,23 +7,23 @@ REM Script:   adstudio-zipfile                                                 #
 REM                                                                            #
 REM Purpose:  Build AD Studio as a zip file                                    #
 REM                                                                            #
-REM Requires: wget, directory 'distribution' created by adstudio-distribution  #
+REM Requires: Directory 'distribution' created by adstudio-distribution        #
 REM                                                                            #
 REM Returns:  Creates adstudio.zip in the current directory                    #
 REM                                                                            #
 REM ############################################################################
 
-set REQUIRED=https://raw.githubusercontent.com/admb-project/adstudio/master/required
+set CON=https://github.com/admb-project/adstudio/releases/download/construction
 
 echo on
 @echo.
 
 @pushd distribution
 
-@echo *** Zipping %ZIPFILE% ...
-..\wget -q %REQUIRED%/zip.exe
+@echo *** Zipping adstudio.zip ...
+@powershell Invoke-WebRequest -OutFile zip.exe %CON%/zip.exe
 zip -rS ..\adstudio.zip ~ admb gnu Rtools
-del zip.exe
+@del zip.exe
 @popd
 @echo.
 @echo Done

@@ -15,7 +15,7 @@ REM ############################################################################
 
 set FROM=components
 set TO=distribution
-set CP=%SYSTEMROOT%\system32\robocopy.exe
+set CP=robocopy
 
 rd /q /s %TO% 2>NUL
 md %TO%
