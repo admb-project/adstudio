@@ -13,20 +13,16 @@
 
 *(22 Jan 2018)*
 
-- [adstudio-10.exe]
-  (https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.exe)
+- [adstudio-10.exe](https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.exe)
   (installer)
-- [adstudio-10.zip]
-  (https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.zip)
+- [adstudio-10.zip](https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.zip)
   (individual components)
-- [adstudio-10.pdf]
-  (https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.pdf)
+- [adstudio-10.pdf](https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.pdf)
   (manual)
 
 ### Latest edition of the manual
 
-- [manual.pdf]
-  (https://github.com/admb-project/adstudio/releases/download/manual/adstudio.pdf)
+- [manual.pdf](https://github.com/admb-project/adstudio/releases/download/manual/adstudio.pdf)
   (updated as needed)
 
 ### "Emacs admb-mode and tmb-mode, without the Emacs"
