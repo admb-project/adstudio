@@ -11,7 +11,7 @@
 
 ### Download version 1.0
 
-*(22 Jan 2018)*
+*22 Jan 2018*
 
 - [adstudio-10.exe](https://github.com/admb-project/adstudio/releases/download/1.0/adstudio-10.exe)
   (installer)
@@ -21,6 +21,8 @@
   (manual)
 
 ### Latest edition of the manual
+
+*22 Jan 2018, same as 1.0 above*
 
 - [manual.pdf](https://github.com/admb-project/adstudio/releases/download/manual/adstudio.pdf)
   (updated as needed)
