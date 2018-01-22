@@ -19,10 +19,12 @@ set INNO=innoextract-1.6-windows.zip
 set RTOOLS=Rtools34.exe
 set VERSION=12.0
 
-set CON=https://github.com/admb-project/adstudio/releases/download/construction
+set CONS=https://github.com/admb-project/adstudio/releases/download/construction
 set DOCS=https://github.com/admb-project/admb/releases/download/admb-12.0
 set GITHUB=https://raw.githubusercontent.com
 set MANUAL=https://github.com/admb-project/adstudio/releases/download/manual
+
+set PSDOWNLOAD=(New-Object System.Net.WebClient).DownloadFile
 
 echo on
 @echo.
@@ -36,9 +38,10 @@ echo on
 %CP% ..\..\icons icons /e > NUL
 %CP% ..\..\dot . .emacs > NUL
 %CP% ..\.. . NEWS > NUL
+@echo.
 
 @echo *** Downloading components ...
-@powershell Invoke-WebRequest -OutFile wget.exe %CON%/wget.exe
+@powershell "%PSDOWNLOAD%('%CONS%/wget.exe', 'wget.exe')"
 @set WGET=wget -q --no-check-certificate
 %WGET% -P admb %GITHUB%/admb-project/admb/master/contrib/emacs/admb.el
 %WGET% -P admb %GITHUB%/admb-project/admb/master/contrib/emacs/LICENSE
@@ -47,10 +50,10 @@ echo on
 %WGET% -P tmb %GITHUB%/kaskr/adcomp/master/emacs/LICENSE
 %WGET% -P tmb %GITHUB%/kaskr/adcomp/master/emacs/NEWS
 %WGET% %DOCS%/admb-%VERSION%.pdf
-%WGET% %CON%/%ADMB%
+%WGET% %CONS%/%ADMB%
 %WGET% %DOCS%/admbre-%VERSION%.pdf
 %WGET% %MANUAL%/adstudio.pdf
-%WGET% %CON%/%AUCTEX%
+%WGET% %CONS%/%AUCTEX%
 %WGET% %DOCS%/autodif-%VERSION%.pdf
 %WGET% http://ftp.gnu.org/gnu/emacs/windows/%EMACS%
 %WGET% http://ess.r-project.org/downloads/ess/%ESS%
@@ -61,7 +64,7 @@ echo on
 @echo.
 
 @echo *** Unpacking components ...
-@powershell Invoke-WebRequest -OutFile unzip.exe %CON%/unzip.exe
+@powershell "%PSDOWNLOAD%('%CONS%/unzip.exe', 'unzip.exe')"
 unzip -q -d %ADMB:.zip=% %ADMB%
 unzip -q -d auctex %AUCTEX%
 unzip -q -d emacs %EMACS%
