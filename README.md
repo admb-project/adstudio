@@ -1,2 +1,33 @@
-# adstudio
-Statistical modelling in ADMB and TMB
+# AD Studio
+
+## Statistical modelling in ADMB and TMB
+
+### Main features
+
+* Dedicated environment for developing ADMB and TMB models
+* Uses the C++ compiler from Rtools
+* Based on the Emacs editor, but with simplified keybindings
+* Especially good support for R, LaTeX, Markdown, GDB, and Git
+* Flexible layout to arrange multiple files on screen
+* Unification and successor of earlier ADMB-IDE and TMB-IDE
+
+### Download version 1.0
+
+* adstudio-10.exe (installer)
+* adstudio-10.zip (components)
+* adstudio-10.pdf (manual)
+
+### Latest edition of the manual
+
+* manual.pdf
+
+### "Emacs admb-mode and tmb-mode, without the Emacs"
+
+The main purpose of AD Studio is to make the convenient Emacs Emacs features of
+admb-mode and tmb-mode available to non-Emacs users. In other words, to disable
+the standard Emacs behavior.
+
+Experienced Emacs users may prefer to ignore the AD Studio [.emacs](dot/.emacs)
+file, and simply install and load ADMB Mode (`admb.el`) and TMB Mode (`tmb.el`)
+like other Emacs packages. They are written as standard "major modes" that
+follow all Emacs mode conventions.
