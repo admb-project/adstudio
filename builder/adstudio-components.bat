@@ -83,7 +83,7 @@ innoextract -s -d temp %RTOOLS%
 @echo *** Renaming manuals ...
 rename admb-%VERSION%.pdf admb.pdf
 rename admbre-%VERSION%.pdf admbre.pdf
-rename autodif-%VERSION% autodif.pdf
+rename autodif-%VERSION%.pdf autodif.pdf
 @popd
 echo.
 @echo Done
