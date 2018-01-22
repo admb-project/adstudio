@@ -1,7 +1,5 @@
 # AD Studio
 
-## Statistical modelling in ADMB and TMB
-
 ### Main features
 
 * Dedicated environment for developing ADMB and TMB models
@@ -23,9 +21,9 @@
 
 ### "Emacs admb-mode and tmb-mode, without the Emacs"
 
-The main purpose of AD Studio is to make the convenient Emacs Emacs features of
-admb-mode and tmb-mode available to non-Emacs users. In other words, to disable
-the standard Emacs behavior.
+One of the main goals of AD Studio is to make the convenient Emacs features of
+`admb-mode` and `tmb-mode` available to non-Emacs users. In other words, to
+disable the standard Emacs behavior.
 
 Experienced Emacs users may prefer to ignore the AD Studio [.emacs](dot/.emacs)
 file, and simply install and load ADMB Mode (`admb.el`) and TMB Mode (`tmb.el`)

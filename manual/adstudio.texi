@@ -81,7 +81,7 @@ Aqua in Denmark.
 
 @section Simplified Emacs
 
-The main purpose of AD Studio is to make the convenient Emacs features of
+One of the main goals of AD Studio is to make the convenient Emacs features of
 @command{admb-mode} and @command{tmb-mode} available to non-Emacs users. In
 other words, to disable the standard Emacs behavior.
 
