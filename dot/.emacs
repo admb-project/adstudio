@@ -6,7 +6,7 @@
 ;; Keywords: emulations
 ;; URL:      http://admb-project.org/tools/adstudio/
 
-(defconst adstudio-version "1.0" "AD Studio version number.")
+(defconst adstudio-version "1.1-devel" "AD Studio version number.")
 
 ;;; Commentary:
 ;;
@@ -109,10 +109,10 @@
 (set-face-attribute 'fringe                       nil :background -            )
 (set-face-attribute 'isearch                      nil :background "yellow"
                     :foreground -)
-(set-face-attribute 'isearch-lazy-highlight-face  nil
+(set-face-attribute 'lazy-highlight               nil
                     :background "palegoldenrod")
-(set-face-attribute 'show-paren-match-face        nil :background "chartreuse" )
-(set-face-attribute 'show-paren-mismatch-face     nil :background "red"        )
+(set-face-attribute 'show-paren-match             nil :background "chartreuse" )
+(set-face-attribute 'show-paren-mismatch          nil :background "red"        )
 ;;==============================================================================
 ;;
 ;; 3  FILES
@@ -279,9 +279,9 @@
 ;;-----------
 ;; 5.2  Edit
 ;;-----------
-(defun backward-delete-word (n)
+(defun backward-delete-word (&optional n)
   "Delete previous N words." (interactive "*p")(delete-word (- n)))
-(defun delete-word (n)
+(defun delete-word (&optional n)
   "Delete following N words." (interactive "*p")
   (delete-region (point)(save-excursion (forward-word n)(point))))
 (defun mouse-extend-region (click)
@@ -312,7 +312,7 @@
 (defcustom adstudio-reminder t
   "Whether to show `adstudio-help' when switching to
 `admb-mode' or `tmb-mode'."
-:tag "Remind me" :type 'boolean)
+:tag "Remind me" :type 'boolean :group 'help)
 (defun adstudio-help ()
   "Show help message for AD Studio." (interactive)
   (message "F2: ADMB mode      F3: TMB mode"))
@@ -430,13 +430,8 @@
   (message nil)
   (setq indent-line-function 'gud-gdb-complete-command)(setq gdb-show-main t)
   (local-set-key [f5]          'gdb-restore-windows)
-  (local-set-key [M-up]        'gdb-io-buffer-off  )
-  (local-set-key [M-down]      'gdb-io-buffer-on   )
-  (local-set-key [?\C-c ?\C-q] 'comint-quit-subjob )
-  (defun gdb-io-buffer-off ()
-    "Enable separate IO buffer." (interactive)(gdb-use-separate-io-buffer 0))
-  (defun gdb-io-buffer-on ()
-    "Disable separate IO buffer." (interactive)(gdb-use-separate-io-buffer t)))
+  (local-set-key [M-up]        'gdb-many-windows   )
+  (local-set-key [M-down]      'gdb-many-windows  ))
 (add-hook 'gdb-mode-hook 'adstudio-gdb-hook)
 ;;------------
 ;; 6.13 LaTeX
