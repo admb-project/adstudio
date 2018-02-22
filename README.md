@@ -34,6 +34,9 @@ One of the main goals of AD Studio is to make the convenient Emacs features of
 disable the standard Emacs behavior.
 
 Experienced Emacs users may prefer to ignore the AD Studio [.emacs](dot/.emacs)
-file, and simply install and load ADMB Mode (`admb.el`) and TMB Mode (`tmb.el`)
-like other Emacs packages. They are written as standard "major modes" that
-follow all Emacs mode conventions.
+file, and simply install and load ADMB Mode
+([admb.el](https://github.com/admb-project/admb/blob/master/contrib/emacs/admb.el))
+and TMB Mode
+([tmb.el](https://github.com/kaskr/adcomp/blob/master/emacs/tmb.el)) like other
+Emacs packages. They are written as standard "major modes" that follow all Emacs
+mode conventions.
