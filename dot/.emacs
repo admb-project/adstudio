@@ -4,7 +4,7 @@
 
 ;; Author:   Arni Magnusson
 ;; Keywords: emulations
-;; URL:      http://admb-project.org/tools/adstudio/
+;; URL:      https://github.com/admb-project/adstudio
 
 (defconst adstudio-version "1.1-devel" "AD Studio version number.")
 
