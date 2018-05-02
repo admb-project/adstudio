@@ -6,7 +6,7 @@
 @set INSTALLER adstudio-10
 @set ADMBDIR admb120-gcc493-win64
 @set DATE (2018-01-22)
-@c @set REVISED Revised manual (2018-01-01)
+@set REVISED Revised manual (2018-05-02)
 @set YEARS 2018
 @macro screen{filename}
 @sp
@@ -62,7 +62,7 @@ Source code: @uref{ftp://ftp.gnu.org/gnu/gcc/} and
 @title AD Studio
 @subtitle Statistical modelling in ADMB and TMB
 @subtitle Version @value{VERSION} @value{DATE}
-@c @subtitle @value{REVISED}
+@subtitle @value{REVISED}
 @author Arni Magnusson
 @page
 @vskip 0pt plus 1filll
@@ -235,8 +235,8 @@ be useful for that:
 @sp 0.5
 
 @noindent
-See also the chapters on @ref{Configuration} and @ref{Troubleshooting} in this
-manual.
+See also the @ref{Configuration} section in this manual, especially about the
+environment variables @env{ADMB_HOME} and @env{PATH}.
 
 @subsec AD Studio Linux/Mac
 
@@ -248,9 +248,9 @@ described above, so the same guidelines apply. The key steps are:
 @item Install ADMB, GNU Emacs, GCC (including the C++ component), and GDB.
 
 @item Download the AD Studio
-@uref{http://admb-project.org/tools/adstudio/core,@file{.emacs}} configuration
-file and place it in @file{~/.emacs} to apply the simplified Emacs user
-interface.
+@uref{https://raw.githubusercontent.com/admb-project/adstudio/master/dot/.emacs,@file{.emacs}}
+configuration file and place it in @file{~/.emacs} to apply the simplified Emacs
+user interface.
 
 @item Download Emacs packages and place inside @code{~/emacs/lisp} to
 provide mode-specific syntax highlighting and commands.
@@ -578,7 +578,7 @@ While working with TMB models, it is often convenient to keep the cursor inside
 the TMB window containing the C++ code. This way, the @command{tmb-mode}
 facilities (menu, keybindings, etc.) remain active. The menu command
 @clickthis{TMB @click{} Run} (@key{f9}) runs the entire R script, but selected
-parts of the script can also ben run stepwise (See @ref{R-mode}).
+parts of the script can also ben run stepwise (See @ref{R mode}).
 
 @section Debug
 
@@ -589,7 +589,7 @@ To finish the debugging session, type @code{quit} in the @code{(gdb)} prompt.
 @chapter R, @LaTeX, and other modes
 
 @section R mode
-@anchor{R-mode}
+@anchor{R mode}
 
 Positioning the cursor inside an R script window activates @command{R-mode},
 that is part of the Emacs Speaks Statistics (ESS) package. It is a feature-rich
@@ -1013,8 +1013,7 @@ keybindings defined in the @file{.emacs} file.
 Longtime users of the Vi editor can turn on Emacs @command{viper-mode}, which is
 a full-featured Vi emulator for Emacs.
 
-@chapter Configuration
-@anchor{Configuration}
+@chapter Editor options
 
 @section Personal @code{.emacs} file
 
@@ -1098,7 +1097,6 @@ menu or desktop shortcut, with the @code{c:/~/icons/ad.ico} decorative icon, and
 similar tricks can be used in Linux and Mac.
 
 @chapter Troubleshooting
-@anchor{Troubleshooting}
 
 @section{General usage}
 
@@ -1141,6 +1139,7 @@ is not found, an error is returned. This feature is provided for advanced users
 who have prepared a makefile in the working directory.
 
 @section{Configuration}
+@anchor{Configuration}
 
 @subsec Double-clicking a @file{.tpl} file does not open it in Emacs
 
@@ -1178,7 +1177,6 @@ distributions include only the C component of GCC, so users need to install the
 optional C++ component before using ADMB.
 
 @subsec Conflicting compilers and libraries
-@anchor{Conflicting compilers and libraries}
 
 @noindent
 When developing models using ADMB or TMB, it is important to have only one C++
@@ -1192,7 +1190,6 @@ it may be necessary to remove them the PATH, either by modifying the PATH
 environment variable, or temporarily renaming directories.
 
 @chapter References
-@anchor{References}
 
 @subsec ADMB
 
