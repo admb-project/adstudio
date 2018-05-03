@@ -6,7 +6,7 @@
 @set INSTALLER adstudio-10
 @set ADMBDIR admb120-gcc493-win64
 @set DATE (2018-01-22)
-@set REVISED Revised manual (2018-05-02)
+@set REVISED Revised manual (2018-05-03)
 @set YEARS 2018
 @macro screen{filename}
 @sp
@@ -210,10 +210,10 @@ user settings (@code{c:/~/.Rprofile, c:/~/Rconsole}) and user libraries
 (@code{c:/~/r/library}), the main program can be removed and upgraded without
 affecting the user setup.
 
-One thing to keep in mind is that the installer modifies the user @env{PATH} and
-file associations. In rare cases, users may need to reconfigure these according
-to taste and needs after installing AD Studio. Advanced users may choose to
-deselect these options during the installation for this reason.
+One thing to keep in mind is that the installer modifies the user @env{HOME} and
+@env{PATH} environment variables, as well as file associations. In rare cases,
+users may need to reconfigure these according to taste and needs after
+installing AD Studio.
 
 @page
 
