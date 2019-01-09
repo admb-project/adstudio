@@ -53,9 +53,9 @@ Name: "{group}\Uninstall AD Studio"; Filename: "{uninstallexe}";                
 
 [Registry]
 ; Environment variables
-Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "PATH";      ValueData: "c:/ADMB/admb120-gcc493-win64/bin;c:/rtools/MINGW_64/bin;c:/gnu/EMACS/bin"; Tasks: path;     Flags: uninsdeletevalue
-Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "HOME";      ValueData: "c:/~";                                                                     Tasks: home;     Flags: uninsdeletevalue
-Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "ADMB_HOME"; ValueData: "c:/ADMB/admb120-gcc493-win64";                                             Tasks: admbhome; Flags: uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "PATH";      ValueData: "c:/ADMB/admb120-gcc493-win64/bin;c:/RTOOLS/bin;c:/rtools/MINGW_64/bin;c:/gnu/EMACS/bin"; Tasks: path;     Flags: uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "HOME";      ValueData: "c:/~";                                                                                   Tasks: home;     Flags: uninsdeletevalue
+Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "ADMB_HOME"; ValueData: "c:/ADMB/admb120-gcc493-win64";                                                           Tasks: admbhome; Flags: uninsdeletevalue
 ; File associations
 Root: HKCR; Subkey: ".cor";                                           ValueType: string; ValueName: ""; ValueData: "ADMB Correlation";                    Tasks: assoc1; Flags: uninsdeletevalue uninsdeletekeyifempty
 Root: HKCR; Subkey: "ADMB Correlation";                               ValueType: string; ValueName: ""; ValueData: "ADMB Correlation";                    Tasks: assoc1; Flags: uninsdeletevalue uninsdeletekeyifempty
