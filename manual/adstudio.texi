@@ -149,11 +149,10 @@ users may not feel like adopting Emacs as their main editor, but would still
 appreciate a dedicated environment for ADMB and TMB.
 
 The rest of this tutorial demonstrates how AD Studio can used without learning
-the details of Emacs. This is achieved with an unusual @file{.emacs}
-configuration file that emulates common keybindings of basic editors, while
-disabling some of the most used Emacs keybindings. This @file{.emacs} file is
-therefore not intended for experienced Emacs users, although they may find it an
-interesting read.
+the details of Emacs. This is achieved with unusual @file{.emacs} settings that
+emulate common keybindings of basic editors, while disabling some of the most
+used Emacs keybindings. This @file{.emacs} file is therefore not intended for
+experienced Emacs users, although they may find it an interesting read.
 
 @section Software components
 
@@ -253,7 +252,7 @@ described above, so the same guidelines apply. The key steps are:
 
 @item Download the AD Studio
 @uref{https://raw.githubusercontent.com/admb-project/adstudio/master/dot/.emacs,@file{.emacs}}
-configuration file and place it in @file{~/.emacs} to apply the simplified Emacs
+settings and place the file in @file{~/.emacs} to apply the simplified Emacs
 user interface.
 
 @item Download Emacs packages and place inside @code{~/emacs/lisp} to
@@ -1168,8 +1167,8 @@ with registry entries or in Windows Explorer folder options.
 @noindent
 The directory containing the @file{admb.el} file needs to be in the Emacs
 variable @code{load-path}, and the @command{admb-mode} command needs to be
-autoloaded in the @file{.emacs} configuration file. The same holds for
-@file{tmb.el} and other Emacs packages.
+autoloaded in the @file{.emacs} settings. The same holds for @file{tmb.el} and
+other Emacs packages.
 
 @page
 
