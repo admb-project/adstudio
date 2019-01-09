@@ -22,7 +22,7 @@
 
 ### Latest edition of the manual
 
-*3 May 2018*
+*9 Jan 2019*
 
 - [manual.pdf](https://github.com/admb-project/adstudio/releases/download/manual/adstudio.pdf)
   (updated as needed)
