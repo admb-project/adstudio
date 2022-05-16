@@ -27,6 +27,8 @@
 - [manual.pdf](https://github.com/admb-project/adstudio/releases/download/manual/adstudio.pdf)
   (updated as needed)
 
+---
+
 ### "Emacs `admb-mode` and `tmb-mode` without the Emacs"
 
 One of the main goals of AD Studio is to make the convenient Emacs features of
